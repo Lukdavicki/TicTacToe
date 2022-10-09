@@ -235,15 +235,15 @@ function winGame() {
 }
 function resetGame() {
 	turnCounter = 0;
-	btn1.style.backgroundColor = "white";
-	btn2.style.backgroundColor = "white";
-	btn3.style.backgroundColor = "white";
-	btn4.style.backgroundColor = "white";
-	btn5.style.backgroundColor = "white";
-	btn6.style.backgroundColor = "white";
-	btn7.style.backgroundColor = "white";
-	btn8.style.backgroundColor = "white";
-	btn9.style.backgroundColor = "white";
+	btn1.style.backgroundColor = "grey";
+	btn2.style.backgroundColor = "grey";
+	btn3.style.backgroundColor = "grey";
+	btn4.style.backgroundColor = "grey";
+	btn5.style.backgroundColor = "grey";
+	btn6.style.backgroundColor = "grey";
+	btn7.style.backgroundColor = "grey";
+	btn8.style.backgroundColor = "grey";
+	btn9.style.backgroundColor = "grey";
 	reset.style.display = "none";
 }
 
