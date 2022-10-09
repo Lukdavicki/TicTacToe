@@ -7,7 +7,8 @@ const btn6 = document.getElementById("btn6");
 const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
-const reset = document.querySelector(".resetBtn");
+const resetGreen = document.querySelector(".resetGreen");
+const resetRed = document.querySelector(".resetRed");
 let player1Score = document.querySelector(".player1score");
 let player2Score = document.querySelector(".player2score");
 let player1ScoreCounter = 0;
@@ -21,16 +22,14 @@ function game1() {
 		btn1.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn1.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game2() {
@@ -38,16 +37,14 @@ function game2() {
 		btn2.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn2.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game3() {
@@ -55,16 +52,14 @@ function game3() {
 		btn3.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn3.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game4() {
@@ -72,16 +67,14 @@ function game4() {
 		btn4.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn4.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game5() {
@@ -89,16 +82,14 @@ function game5() {
 		btn5.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn5.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game6() {
@@ -106,16 +97,14 @@ function game6() {
 		btn6.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn6.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game7() {
@@ -123,16 +112,14 @@ function game7() {
 		btn7.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn7.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game8() {
@@ -140,16 +127,14 @@ function game8() {
 		btn8.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn8.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
 function game9() {
@@ -157,19 +142,17 @@ function game9() {
 		btn9.style.backgroundColor = "green";
 		playerFlag = false;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameGreen();
 	} else if (!playerFlag) {
 		btn9.style.backgroundColor = "red";
 		playerFlag = true;
 		turnCounter++;
-		turnCount.innerHTML = turnCounter;
 
-		winGame();
+		winGameRed();
 	}
 }
-function winGame() {
+function winGameGreen() {
 	if (
 		(btn1.style.backgroundColor == "green" &&
 			btn2.style.backgroundColor == "green" &&
@@ -196,12 +179,14 @@ function winGame() {
 			btn5.style.backgroundColor == "green" &&
 			btn9.style.backgroundColor == "green")
 	) {
-		reset.style.display = "block";
+		console.log("green wins");
+		resetGreen.style.visibility = "visible";
 		player1ScoreCounter++;
 		player1Score.innerHTML = player1ScoreCounter;
 	} else if (turnCounter >= 9) {
-		reset.style.display = "block";
 	}
+}
+function winGameRed() {
 	if (
 		(btn1.style.backgroundColor == "red" &&
 			btn2.style.backgroundColor == "red" &&
@@ -228,9 +213,11 @@ function winGame() {
 			btn5.style.backgroundColor == "red" &&
 			btn9.style.backgroundColor == "red")
 	) {
-		reset.style.display = "block";
+		console.log("red wins");
+		resetRed.style.visibility = "visible";
 		player2ScoreCounter++;
 		player2Score.innerHTML = player1ScoreCounter;
+	} else if (turnCounter >= 9) {
 	}
 }
 function resetGame() {
@@ -244,10 +231,12 @@ function resetGame() {
 	btn7.style.backgroundColor = "grey";
 	btn8.style.backgroundColor = "grey";
 	btn9.style.backgroundColor = "grey";
-	reset.style.display = "none";
+	resetGreen.style.visibility = "hidden";
+	resetRed.style.visibility = "hidden";
 }
 
-reset.addEventListener("click", resetGame);
+resetGreen.addEventListener("click", resetGame);
+resetRed.addEventListener("click", resetGame);
 btn1.addEventListener("click", game1);
 btn2.addEventListener("click", game2);
 btn3.addEventListener("click", game3);

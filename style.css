@@ -1,11 +1,12 @@
-.turn{
+/* .turn{
     text-align: center;
+} */
+
+.upperTable{
+    margin-top:3.5em;
 }
-
-
 .outerContainer{
-    margin-top:2em;
-    height:40vh;
+    height:60vh;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -23,10 +24,31 @@
 .reset{
     position: absolute;
     z-index: 10;
-}
-.resetBtn{
-    font-size:7em;
     display:none;
+}
+
+.resetButtonTop {
+    padding-bottom: 1em;
+}
+.resetButtonTop button {
+    transform:rotate(180deg);
+    font-size: 2em;
+    margin:auto;
+    display:block;
+    visibility: hidden;
+
+
+}
+.resetButtonBottom{
+    padding-top: 1em;
+}
+.resetButtonBottom button{
+    font-size: 2em;
+    margin:auto;
+    display:block;
+    visibility: hidden;
+
+    
 }
 table{
     width:70vw;
@@ -34,39 +56,14 @@ table{
     margin-right: auto;
 }
 
-.score{
-    text-align: center;
-    
-    font-size: 2.0em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid grey;
-}
-.playerTitle1{
-text-align: center;
-background-color:rgb(46, 203, 46);
-padding-block: 0.5em;
-font-size:1.6em
-}
-.playerTitle2 {
-    text-align: center;
-    background-color:rgb(255, 0, 0);
-    padding-block: 0.5em;
-    font-size: 1.6em;
-}
-.vsLabel{
-    text-align: center;
-       
-        padding-block: 0.5em;
-        font-size: 2.0em;
-        border-bottom: 2px solid grey;
-}
+
 .player1scorelabel{
     text-align: center;
         background-color: rgb(46, 203, 46);
         padding-block: 0.25em;
         font-size: 2.0em;
-        font-weight: bolder
+        font-weight: bolder;
+        transform:rotate(180deg)
         
 }
 .player2scorelabel{
