@@ -18,7 +18,7 @@
 }
 .innerContainer button{
     border:1px solid black;
-    background-color: white;
+    background-color: grey;
 }
 .reset{
     position: absolute;
@@ -37,7 +37,7 @@ table{
 .score{
     text-align: center;
     
-    font-size: 3.5em;
+    font-size: 2.0em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-bottom: 2px solid grey;
@@ -46,26 +46,26 @@ table{
 text-align: center;
 background-color:rgb(46, 203, 46);
 padding-block: 0.5em;
-font-size:2.5em
+font-size:1.6em
 }
 .playerTitle2 {
     text-align: center;
     background-color:rgb(255, 0, 0);
     padding-block: 0.5em;
-    font-size: 2.5em;
+    font-size: 1.6em;
 }
 .vsLabel{
     text-align: center;
        
         padding-block: 0.5em;
-        font-size: 2.5em;
+        font-size: 2.0em;
         border-bottom: 2px solid grey;
 }
 .player1scorelabel{
     text-align: center;
         background-color: rgb(46, 203, 46);
         padding-block: 0.25em;
-        font-size: 3.5em;
+        font-size: 2.0em;
         font-weight: bolder
         
 }
@@ -73,7 +73,7 @@ font-size:2.5em
     text-align: center;
         background-color: rgb(255, 0, 0);
         padding-block: 0.25em;
-        font-size: 3.5em;
+        font-size: 2.0em;
         font-weight:bolder
 }
 
