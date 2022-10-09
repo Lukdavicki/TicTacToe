@@ -1,7 +1,6 @@
-/* .turn{
-    text-align: center;
-} */
-
+body{
+    background-color: #edda06;
+}
 .upperTable{
     margin-top:3.5em;
 }
@@ -18,17 +17,53 @@
         grid-gap:10px;
 }
 .innerContainer button{
-    border:1px solid black;
+    border:2px solid black;
     background-color: grey;
 }
+
 .reset{
     position: absolute;
     z-index: 10;
     display:none;
 }
+.wonBannerGreen {
+    font-size: 3.5em;
+    transform:rotate(180deg);
+    background-color: rgb(46, 203, 46);
+    margin-right: 0.1em;
+    
+}
+.wonBanner{
+    font-size: 3.5em;
+    
+}
+.wonBannerRed{
+    font-size: 3.5em;
+    background-color: rgb(255, 0, 0);
+    margin-right: 0.1em;
+    
+}
+.lostBannerGreen {
+    font-size: 3.5em;
+    transform: rotate(180deg);
+    background-color:rgb(46, 203, 46);
+    margin-left: 0.1em;
+    
+}
+.lostBanner{
+    font-size: 3.5em;
+    
+}
+.lostBannerRed {
+    font-size: 3.5em;
+    background-color: #d50707;
+    margin-left: 0.1em;
+    
+}
 
 .resetButtonTop {
     padding-bottom: 1em;
+    
 }
 .resetButtonTop button {
     transform:rotate(180deg);
@@ -36,6 +71,7 @@
     margin:auto;
     display:block;
     visibility: hidden;
+    background-color: grey;
 
 
 }
@@ -47,6 +83,7 @@
     margin:auto;
     display:block;
     visibility: hidden;
+    background-color: grey;
 
     
 }
@@ -63,7 +100,8 @@ table{
         padding-block: 0.25em;
         font-size: 2.0em;
         font-weight: bolder;
-        transform:rotate(180deg)
+        transform:rotate(180deg);
+        border:2px solid black;
         
 }
 .player2scorelabel{
@@ -71,6 +109,7 @@ table{
         background-color: rgb(255, 0, 0);
         padding-block: 0.25em;
         font-size: 2.0em;
-        font-weight:bolder
+        font-weight:bolder;
+        border: 2px solid black;
 }
 

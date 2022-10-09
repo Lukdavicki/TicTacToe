@@ -7,6 +7,7 @@ const btn6 = document.getElementById("btn6");
 const btn7 = document.getElementById("btn7");
 const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
+const reset = document.querySelector(".reset");
 const resetGreen = document.querySelector(".resetGreen");
 const resetRed = document.querySelector(".resetRed");
 let player1Score = document.querySelector(".player1score");
@@ -17,6 +18,9 @@ let playerFlag = true;
 const turnCount = document.querySelector(".turnCount");
 let turnCounter = 0;
 
+let wonBanner = document.querySelector(".wonBanner");
+let lostBanner = document.querySelector(".lostBanner");
+
 function game1() {
 	if (playerFlag) {
 		btn1.style.backgroundColor = "green";
@@ -25,7 +29,7 @@ function game1() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn1.style.backgroundColor = "red";
+		btn1.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -40,7 +44,7 @@ function game2() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn2.style.backgroundColor = "red";
+		btn2.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -55,7 +59,7 @@ function game3() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn3.style.backgroundColor = "red";
+		btn3.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -70,7 +74,7 @@ function game4() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn4.style.backgroundColor = "red";
+		btn4.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -85,7 +89,7 @@ function game5() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn5.style.backgroundColor = "red";
+		btn5.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -100,7 +104,7 @@ function game6() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn6.style.backgroundColor = "red";
+		btn6.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -115,7 +119,7 @@ function game7() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn7.style.backgroundColor = "red";
+		btn7.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -130,7 +134,7 @@ function game8() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn8.style.backgroundColor = "red";
+		btn8.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -145,7 +149,7 @@ function game9() {
 
 		winGameGreen();
 	} else if (!playerFlag) {
-		btn9.style.backgroundColor = "red";
+		btn9.style.backgroundColor = "brown";
 		playerFlag = true;
 		turnCounter++;
 
@@ -183,41 +187,55 @@ function winGameGreen() {
 		resetGreen.style.visibility = "visible";
 		player1ScoreCounter++;
 		player1Score.innerHTML = player1ScoreCounter;
+		reset.style.display = "block";
+
+		wonBanner.classList.add("wonBannerGreen");
+
+		lostBanner.classList.add("lostBannerRed");
 	} else if (turnCounter >= 9) {
+		resetRed.style.visibility = "visible";
+		resetGreen.style.visibility = "visible";
 	}
 }
 function winGameRed() {
 	if (
-		(btn1.style.backgroundColor == "red" &&
-			btn2.style.backgroundColor == "red" &&
-			btn3.style.backgroundColor == "red") ||
-		(btn4.style.backgroundColor == "red" &&
-			btn5.style.backgroundColor == "red" &&
-			btn6.style.backgroundColor == "red") ||
-		(btn7.style.backgroundColor == "red" &&
-			btn8.style.backgroundColor == "red" &&
-			btn9.style.backgroundColor == "red") ||
-		(btn1.style.backgroundColor == "red" &&
-			btn4.style.backgroundColor == "red" &&
-			btn7.style.backgroundColor == "red") ||
-		(btn2.style.backgroundColor == "red" &&
-			btn5.style.backgroundColor == "red" &&
-			btn8.style.backgroundColor == "red") ||
-		(btn3.style.backgroundColor == "red" &&
-			btn6.style.backgroundColor == "red" &&
-			btn9.style.backgroundColor == "red") ||
-		(btn3.style.backgroundColor == "red" &&
-			btn5.style.backgroundColor == "red" &&
-			btn7.style.backgroundColor == "red") ||
-		(btn1.style.backgroundColor == "red" &&
-			btn5.style.backgroundColor == "red" &&
-			btn9.style.backgroundColor == "red")
+		(btn1.style.backgroundColor == "brown" &&
+			btn2.style.backgroundColor == "brown" &&
+			btn3.style.backgroundColor == "brown") ||
+		(btn4.style.backgroundColor == "brown" &&
+			btn5.style.backgroundColor == "brown" &&
+			btn6.style.backgroundColor == "brown") ||
+		(btn7.style.backgroundColor == "brown" &&
+			btn8.style.backgroundColor == "brown" &&
+			btn9.style.backgroundColor == "brown") ||
+		(btn1.style.backgroundColor == "brown" &&
+			btn4.style.backgroundColor == "brown" &&
+			btn7.style.backgroundColor == "brown") ||
+		(btn2.style.backgroundColor == "brown" &&
+			btn5.style.backgroundColor == "brown" &&
+			btn8.style.backgroundColor == "brown") ||
+		(btn3.style.backgroundColor == "brown" &&
+			btn6.style.backgroundColor == "brown" &&
+			btn9.style.backgroundColor == "brown") ||
+		(btn3.style.backgroundColor == "brown" &&
+			btn5.style.backgroundColor == "brown" &&
+			btn7.style.backgroundColor == "brown") ||
+		(btn1.style.backgroundColor == "brown" &&
+			btn5.style.backgroundColor == "brown" &&
+			btn9.style.backgroundColor == "brown")
 	) {
 		console.log("red wins");
-		resetRed.style.visibility = "visible";
+		resetRed.style.visibility = "visible"
 		player2ScoreCounter++;
-		player2Score.innerHTML = player1ScoreCounter;
+		player2Score.innerHTML = player2ScoreCounter;
+		reset.style.display = "block";
+
+		wonBanner.classList.add("wonBannerRed");
+
+		lostBanner.classList.add("lostBannerGreen");
 	} else if (turnCounter >= 9) {
+		resetGreen.style.visibility = "visible";
+		resetRed.style.visibility = "visible";
 	}
 }
 function resetGame() {
@@ -231,6 +249,11 @@ function resetGame() {
 	btn7.style.backgroundColor = "grey";
 	btn8.style.backgroundColor = "grey";
 	btn9.style.backgroundColor = "grey";
+	reset.style.display = "none";
+	wonBanner.classList.remove("wonBannerGreen");
+	wonBanner.classList.remove("wonBannerRed");
+	lostBanner.classList.remove("lostBannerGreen");
+	lostBanner.classList.remove("lostBannerRed");
 	resetGreen.style.visibility = "hidden";
 	resetRed.style.visibility = "hidden";
 }
