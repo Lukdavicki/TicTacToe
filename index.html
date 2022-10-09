@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>JS TicTacToe test git</title>
+	</head>
+	<body>
+		<h1 class="turn">Tura : <span class="turnCount">0</span></h1>
+
+		<div class="outerContainer">
+			<div class="innerContainer">
+				<button id="btn1" class="btnColor"></button>
+				<button id="btn2" class="btnColor"></button>
+				<button id="btn3" class="btnColor"></button>
+				<button id="btn4" class="btnColor"></button>
+				<button id="btn5" class="btnColor"></button>
+				<button id="btn6" class="btnColor"></button>
+				<button id="btn7" class="btnColor"></button>
+				<button id="btn8" class="btnColor"></button>
+				<button id="btn9" class="btnColor"></button>
+			</div>
+			<div class="reset">
+				<button class="resetBtn">RESET</button>
+			</div>
+		</div>
+		<table>
+			<tr>
+				<th class="score" colspan="4">Wynik</th>
+			</tr>
+			<tr>
+				<td class="playerTitle1" colspan="2">Gracz 1</td>
+
+				<td class="playerTitle2" colspan="2">Gracz 2</td>
+			</tr>
+			<tr>
+				<td class="vsLabel" colspan="4">VS</td>
+			</tr>
+			<tr>
+				<td class="player1scorelabel" colspan="2">
+					<span class="player1score">0</span>
+				</td>
+
+				<td class="player2scorelabel" colspan="2">
+					<span class="player2score">0</span>
+				</td>
+			</tr>
+		</table>
+		<script src="logic.js"></script>
+	</body>
+</html>
