@@ -35,6 +35,7 @@ body{
 }
 .wonBanner{
     font-size: 3.5em;
+    color: black;
     
 }
 .wonBannerRed{
@@ -52,6 +53,7 @@ body{
 }
 .lostBanner{
     font-size: 3.5em;
+    color:black;
     
 }
 .lostBannerRed {
@@ -64,6 +66,7 @@ body{
 .resetButtonTop {
     padding-bottom: 1em;
     
+    
 }
 .resetButtonTop button {
     transform:rotate(180deg);
@@ -72,6 +75,8 @@ body{
     display:block;
     visibility: hidden;
     background-color: grey;
+    color: black;
+   
 
 
 }
@@ -84,6 +89,7 @@ body{
     display:block;
     visibility: hidden;
     background-color: grey;
+    color:black;
 
     
 }
@@ -113,3 +119,16 @@ table{
         border: 2px solid black;
 }
 
+@media only screen and (min-width: 375px) and (orientation: portrait) {
+
+    .wonBanner {
+        font-size: 2.2em;
+
+
+    }
+    .lostBanner {
+        font-size: 2.2em;
+
+    }
+
+}

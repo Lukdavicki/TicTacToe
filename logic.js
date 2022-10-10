@@ -225,7 +225,7 @@ function winGameRed() {
 			btn9.style.backgroundColor == "brown")
 	) {
 		console.log("red wins");
-		resetRed.style.visibility = "visible"
+		resetRed.style.visibility = "visible";
 		player2ScoreCounter++;
 		player2Score.innerHTML = player2ScoreCounter;
 		reset.style.display = "block";
